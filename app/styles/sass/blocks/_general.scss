@@ -1,0 +1,36 @@
+// Structure Styles
+.container {
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+.page {
+	&-index {}
+}
+
+// Default
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+input, textarea {
+	outline: none;
+
+	&:focus:required:invalid {
+		border-color: red
+	}
+
+	&:required:valid {
+		border-color: green
+	}
+}
+
+body {
+	font-family: $font;
+	color: $text-color;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+}

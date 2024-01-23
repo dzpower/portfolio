@@ -1,0 +1,34 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+// Fonts Configuration
+@mixin font($name, $style, $weight, $url) {
+	@font-face {
+		font-family: $name;
+		font-style: $style;
+		font-weight: $weight;
+		src: url($url) format('woff2');
+	}
+}
+
+@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2');
+@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2');
+@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2');
+@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2');
+
+// Color Variables
+$dark: #333;
+$black: #000;
+$white: #fff;
+$yellow: #FFF3EC;
+$accent: #2DA866;
+$text-color: $black;
+$border-color: #C4C4C4;
+
+// Font Variables
+$font: 'Montserrat', sans-serif;
+
+// Resolutions
+$laptop: 1366px;
+$tablet: 1200px;
+$mobile: 640px;
