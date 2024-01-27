@@ -1,1 +1,167 @@
-.header {}
+.header {
+	width: 100%;
+	background: $dark;
+	padding-top: 74px;
+	padding-bottom: 140px;
+	
+	&-nav {
+		width: 100%;
+		padding-top: 18px;
+		padding-bottom: 18px;
+		position: fixed;
+		left: 0;
+		top: 0;
+		
+		.wrapper {
+			display: flex;
+			align-items: center;
+		}
+		
+		.logo {
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 28px;
+			color: $white;
+			margin-right: auto;
+			
+			span {
+				color: $primary;
+			}
+		}
+		
+		.navigation {
+			display: flex;
+			align-items: center;
+			
+			a {
+				color: $white;
+				font-size: 14px;
+				font-weight: 700;
+				line-height: normal;
+				text-decoration: none;
+				transition: all .3s ease-in-out;
+				margin-right: 38px;
+				
+				&:last-child {
+					margin-right: 0;
+				}
+				
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+		
+		&__contact-btn {
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 18px;
+			border: 1px solid $primary;
+			padding: 10px 16px;
+			color: $white;
+			background: transparent;
+			transition: all .3s ease-in-out;
+			cursor: pointer;
+			margin-left: 58px;
+			
+			&:hover {
+				background: $primary;
+				color: $dark;
+			}
+		}
+	}
+	
+	.short-info {
+		width: 100%;
+		margin-top: 100px;
+		
+		.main-title {
+			display: flex;
+			flex-direction: column;
+			font-weight: 700;
+			margin-bottom: 38px;
+			
+			&__name {
+				font-size: 38px;
+				line-height: 68px;
+				color: $primary;
+			}
+			
+			&__vac {
+				font-size: 88px;
+				line-height: 94px;
+				color: $white;
+			}
+		}
+		
+		.short-description {
+			width: 80%;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 28px;
+			color: $gray;
+			margin-bottom: 58px;
+		}
+		
+		.actions {
+			display: flex;
+			align-items: center;
+			
+			&-email {
+				font-size: 18px;
+				font-weight: 700;
+				line-height: 18px;
+				padding: 18px 28px;
+				color: $white;
+				background: $primary;
+				text-decoration: none;
+				margin-right: 38px;
+				border: 1px solid $primary;
+				transition: all .3s ease-in-out;
+				
+				&:hover {
+					background: transparent;
+					color: $primary;
+				}
+			}
+			
+			&-cv {
+				font-size: 18px;
+				font-weight: 700;
+				line-height: 18px;
+				color: $gray;
+				display: inline-flex;
+				align-items: center;
+				text-decoration: none;
+				transition: all .3s ease-in-out;
+				
+				svg {
+					width: 24px;
+					margin-right: 10px;
+				}
+				
+				&:hover {
+					color: $primary;
+
+					svg {
+						fill: $primary;
+					}
+				}
+			}
+		}
+
+		.blink {
+			color: $white;
+			animation: blink .5s infinite;
+		}
+
+		@keyframes blink {
+			to {
+				opacity: 0;
+			}
+		}
+	}
+}
+
