@@ -1,9 +1,25 @@
 * {
 	font-family: $font;
+	box-sizing: border-box;
 }
+
+body {
+	position: relative;
+	background: $dark;
+}
+
+
+#canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
 
 .container {
 	width: 100%;
+	padding: 0 16px;
 }
 
 .wrapper {

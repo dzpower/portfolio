@@ -1,8 +1,9 @@
 .header {
 	width: 100%;
-	background: $dark;
 	padding-top: 74px;
 	padding-bottom: 140px;
+	position: relative;
+	z-index: 11;
 	
 	&-nav {
 		width: 100%;
@@ -11,6 +12,7 @@
 		position: fixed;
 		left: 0;
 		top: 0;
+		background: $dark;
 		
 		.wrapper {
 			display: flex;
