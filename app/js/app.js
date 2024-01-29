@@ -1,4 +1,7 @@
 import $ from "jquery";
+import 'owl.carousel';
+
+
 const typewriterText = [
 	"Nuxt.js",
 	"JavaScript",
@@ -140,3 +143,20 @@ window.addEventListener("resize", function() {
 
 loop();
 setInterval(loop, 1000 / 60);
+
+$('.owl-carousel').owlCarousel({
+	loop:true,
+	margin:10,
+	nav:true,
+	responsive:{
+		0:{
+			items:1
+		},
+		600:{
+			items:3
+		},
+		1000:{
+			items:5
+		}
+	}
+})

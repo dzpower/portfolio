@@ -23,7 +23,15 @@
 		max-width: 360px;
 		display: flex;
 		flex-direction: column;
-
+		
+		&__full-width {
+			max-width: 100%;
+		}
+		
+		.heading-title {
+			padding-top: 16px;
+		}
+		
 		&__title {
 			display: inline-flex;
 			align-items: center;
@@ -134,6 +142,130 @@
 				font-size: 16px;
 				font-weight: 400;
 				line-height: normal;
+				color: $gray;
+			}
+		}
+	}
+	
+	.projects {
+		background: $lightDark;
+		padding-top: 100px;
+		padding-bottom: 128px;
+		
+		&-list {
+			display: flex;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			padding-top: 90px;
+		}
+		
+		&-item {
+			width: 100%;
+			max-width: 550px;
+			text-decoration: none;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 48px;
+			
+			&:nth-child(1n + 0) {
+				margin-right: auto;
+			}
+			
+			&__img {
+				width: 100%;
+				margin-bottom: 38px;
+				
+				img {
+					width: 100%;
+					filter: grayscale(1);
+					transition: transform 0.3s ease;
+				}
+				
+				&:hover {
+					img {
+						filter: grayscale(0);
+					}
+				}
+			}
+			
+			&__title {
+				font-size: 28px;
+				font-weight: 700;
+				line-height: 32px;
+				color: $white;
+				padding-bottom: 16px;
+			}
+			
+			&__link {
+				display: inline-flex;
+				font-size: 20px;
+				color: $primary;
+				font-weight: 500;
+				line-height: normal;
+				
+				img {
+					width: 24px;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+	
+	.testimonials {
+		padding-top: 140px;
+		padding-bottom: 100px;
+	}
+	
+	.banner {
+		position: relative;
+		background: $deepGray;
+		padding: 63px 0;
+		
+		.btn-contact {
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 18px;
+			padding: 18px 28px;
+			color: $white;
+			background: $primary;
+			text-decoration: none;
+			margin-right: 38px;
+			border: 1px solid $primary;
+			transition: all .3s ease-in-out;
+
+			&:hover {
+				background: transparent;
+				color: $primary;
+			}
+		}
+		
+		.wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		&:before {
+			content: "";
+			width: 4px;
+			min-height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: $primary;
+		}
+		
+		.info-group {
+			
+			.heading-title {
+				margin-bottom: 16px;
+			}
+			
+			&__description {
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 28px;
 				color: $gray;
 			}
 		}
