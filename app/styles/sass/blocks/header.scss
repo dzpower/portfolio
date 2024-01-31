@@ -1,7 +1,7 @@
 .header {
 	width: 100%;
 	padding-top: 74px;
-	padding-bottom: 140px;
+	padding-bottom: 70px;
 	position: relative;
 	z-index: 20;
 	
@@ -17,18 +17,6 @@
 		.wrapper {
 			display: flex;
 			align-items: center;
-		}
-		
-		.logo {
-			font-size: 24px;
-			font-weight: 700;
-			line-height: 28px;
-			color: $white;
-			margin-right: auto;
-			
-			span {
-				color: $primary;
-			}
 		}
 		
 		.navigation {
@@ -167,3 +155,26 @@
 	}
 }
 
+.logo {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 28px;
+	color: $white;
+	margin-right: auto;
+	transition: all .3s ease-in-out;
+	cursor: pointer;
+	text-decoration: none;
+	
+	span {
+		transition: all .3s ease-in-out;
+		color: $primary;
+	}
+
+	&:hover {
+		color: $primary;
+		
+		span {
+			color: $white;
+		}
+	}
+}

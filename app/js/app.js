@@ -146,17 +146,23 @@ setInterval(loop, 1000 / 60);
 
 $('.owl-carousel').owlCarousel({
 	loop:true,
-	margin:10,
+	margin:0,
+	autoplay: true,
 	nav:true,
+	dots: false,
+	center: true,
+	navText: ['<img src="../images/arrow-slider.svg" alt=""/>', '<img src="../images/arrow-slider.svg" alt=""/>'],
 	responsive:{
 		0:{
 			items:1
-		},
-		600:{
-			items:3
-		},
-		1000:{
-			items:5
 		}
 	}
 })
+
+var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+	$page.animate({
+		scrollTop: $($.attr(this, 'href')).offset().top
+	}, 400);
+	return false;
+});
