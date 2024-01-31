@@ -195,6 +195,11 @@
 			display: flex;
 			align-items: center;
 			
+			@media (max-width: 640px) {
+				width: 100%;
+				justify-content: space-between;
+			}
+			
 			&-email {
 				font-size: 18px;
 				font-weight: 700;
@@ -206,6 +211,10 @@
 				margin-right: 38px;
 				border: 1px solid $primary;
 				transition: all .3s ease-in-out;
+
+				@media (max-width: 640px) {
+					margin-right: auto;
+				}
 				
 				&:hover {
 					background: transparent;
@@ -272,5 +281,18 @@
 		span {
 			color: $white;
 		}
+	}
+}
+
+.blink {
+	@media (max-width: 640px) {
+		display: none;
+	}
+}
+
+.mobile-blink {
+	display: none;
+	@media (max-width: 640px) {
+		display: inline-block;
 	}
 }
