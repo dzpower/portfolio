@@ -161,8 +161,14 @@ $('.owl-carousel').owlCarousel({
 
 var $page = $('html, body');
 $('a[href*="#"]').click(function() {
+	$('.navigation').removeClass('open')
 	$page.animate({
 		scrollTop: $($.attr(this, 'href')).offset().top
 	}, 400);
 	return false;
 });
+
+$('.menu').click((e) => {
+	e.preventDefault()
+	$('.navigation').toggleClass('open')
+})

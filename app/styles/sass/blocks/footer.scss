@@ -19,6 +19,10 @@
 				margin-bottom: 16px;
 			}
 		}
+
+		@media (max-width: 640px) {
+			padding-bottom: 16px;
+		}
 	}
 	
 	&-col {
