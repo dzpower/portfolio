@@ -66,6 +66,10 @@
 		flex-wrap: wrap;
 		margin-top: 90px;
 		padding-bottom: 140px;
+		
+		@media (max-width: 820px) {
+			justify-content: center;
+		}
 
 		&-item {
 			width: 100%;
@@ -77,6 +81,19 @@
 			background: $lightDark;
 			border-bottom: 6px solid $primary;
 			transition: transform 0.3s ease;
+			
+			@media (max-width: 1108px) {
+				max-width: 32%;
+			}
+
+			@media (max-width: 820px) {
+				max-width: 66%;
+				margin-bottom: 16px;
+			}
+
+			@media (max-width: 768px) {
+				max-width: 100%;
+			}
 			
 			&:hover {
 				transform: translateY(-16px);
@@ -158,6 +175,11 @@
 			align-items: flex-start;
 			flex-wrap: wrap;
 			padding-top: 90px;
+
+
+			@media (max-width: 1140px) {
+				
+			}
 		}
 		
 		&-item {
@@ -169,7 +191,11 @@
 			align-items: flex-start;
 			margin-bottom: 48px;
 			
-			&:nth-child(1n + 0) {
+			@media (max-width: 1140px) {
+				max-width: 48%;
+			}
+			
+			&:nth-child(odd) {
 				margin-right: auto;
 			}
 			
@@ -290,7 +316,7 @@
 	.banner {
 		position: relative;
 		background: $deepGray;
-		padding: 63px 0;
+		padding: 63px 16px;
 		
 		.btn-contact {
 			font-size: 18px;
@@ -314,6 +340,12 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			
+			@media (max-width: 820px) {
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+			}
 		}
 		
 		&:before {
